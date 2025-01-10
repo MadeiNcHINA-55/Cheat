@@ -40,7 +40,7 @@ local function createGui(parent)
 	TextButton5["TextSize"] = 14
 	TextButton5["Font"] = Enum.Font.Arcade
 	TextButton5["Name"] = "DungeonPlace"
-	TextButton5["Position"] = UDim2.new(0.14480409, 0, 0.168654174, 0)
+	TextButton5["Position"] = UDim2.new(0.337308347, 0, 0.136286199, 0)
 	TextButton5["TextScaled"] = true
 	TextButton5["Size"] = UDim2.new(0.340715498, 0, 0.0851788744, 0)
 	TextButton5["BorderSizePixel"] = 0
@@ -62,7 +62,7 @@ local function createGui(parent)
 	TextButton8["TextSize"] = 14
 	TextButton8["Font"] = Enum.Font.Arcade
 	TextButton8["Name"] = "AutoComplete"
-	TextButton8["Position"] = UDim2.new(0.262350947, 0, 0.304940373, 0)
+	TextButton8["Position"] = UDim2.new(0.0306643955, 0, 0.894378185, 0)
 	TextButton8["TextScaled"] = true
 	TextButton8["Size"] = UDim2.new(0.340715498, 0, 0.0851788744, 0)
 	TextButton8["BorderSizePixel"] = 0
@@ -71,40 +71,39 @@ local function createGui(parent)
 	--UICorner9--
 	local UICorner9 = Instance.new("UICorner",TextButton8)
 	----UICorner9----
-	--Script10--
-	local Script10 = Instance.new("Script",TextButton8)
-	Script10["Name"] = "Main"
-	----Script10----
-	--TextButton11--
-	local TextButton11 = Instance.new("TextButton",TextButton8)
-	TextButton11["TextWrapped"] = true
-	TextButton11["TextColor3"] = Color3.new(0, 0, 0)
-	TextButton11["BorderColor3"] = Color3.new(0, 0, 0)
-	TextButton11["Text"] = "Y/N"
-	TextButton11["TextSize"] = 14
-	TextButton11["Font"] = Enum.Font.Arcade
-	TextButton11["Name"] = "Y/N"
-	TextButton11["Position"] = UDim2.new(1.10065305, 0, 0.0449450687, 0)
-	TextButton11["TextScaled"] = true
-	TextButton11["Size"] = UDim2.new(0.340289623, 0, 0.905179441, 0)
-	TextButton11["BorderSizePixel"] = 0
-	TextButton11["BackgroundColor3"] = Color3.new(0.262745, 0.262745, 0.262745)
-	----TextButton11----
-	--UICorner12--
-	local UICorner12 = Instance.new("UICorner",TextButton11)
-	----UICorner12----
+	--TextButton10--
+	local TextButton10 = Instance.new("TextButton",TextButton8)
+	TextButton10["TextWrapped"] = true
+	TextButton10["TextColor3"] = Color3.new(0, 0, 0)
+	TextButton10["BorderColor3"] = Color3.new(0, 0, 0)
+	TextButton10["Text"] = "Y/N"
+	TextButton10["TextSize"] = 14
+	TextButton10["Font"] = Enum.Font.Arcade
+	TextButton10["Name"] = "Y/N"
+	TextButton10["Position"] = UDim2.new(1.10065305, 0, 0.0449450687, 0)
+	TextButton10["TextScaled"] = true
+	TextButton10["Size"] = UDim2.new(0.340289623, 0, 0.905179441, 0)
+	TextButton10["BorderSizePixel"] = 0
+	TextButton10["BackgroundColor3"] = Color3.new(0.262745, 0.262745, 0.262745)
+	----TextButton10----
+	--UICorner11--
+	local UICorner11 = Instance.new("UICorner",TextButton10)
+	----UICorner11----
+	--Script12--
+	local Script12 = Instance.new("Script",TextButton8)
+	----Script12----
 	--TextButton13--
-	local TextButton13 = Instance.new("TextButton",Frame2)
+	local TextButton13 = Instance.new("TextButton",ScreenGui1)
 	TextButton13["TextWrapped"] = true
 	TextButton13["TextColor3"] = Color3.new(0, 0, 0)
 	TextButton13["BorderColor3"] = Color3.new(0, 0, 0)
-	TextButton13["Text"] = "TP Mossy Ruin"
+	TextButton13["Text"] = "EXOGonal cheat"
 	TextButton13["TextSize"] = 14
 	TextButton13["Font"] = Enum.Font.Arcade
-	TextButton13["Name"] = "TPMOSSY"
-	TextButton13["Position"] = UDim2.new(0.516183972, 0, 0.168654174, 0)
+	TextButton13["Name"] = "Leave"
+	TextButton13["Position"] = UDim2.new(0.910007179, 0, 0.838187695, 0)
 	TextButton13["TextScaled"] = true
-	TextButton13["Size"] = UDim2.new(0.340715498, 0, 0.0851788744, 0)
+	TextButton13["Size"] = UDim2.new(0.0708909184, 0, 0.124860838, 0)
 	TextButton13["BorderSizePixel"] = 0
 	TextButton13["BackgroundColor3"] = Color3.new(0.262745, 0.262745, 0.262745)
 	----TextButton13----
@@ -115,28 +114,6 @@ local function createGui(parent)
 	local Script15 = Instance.new("Script",TextButton13)
 	Script15["Name"] = "Main"
 	----Script15----
-	--TextButton16--
-	local TextButton16 = Instance.new("TextButton",ScreenGui1)
-	TextButton16["TextWrapped"] = true
-	TextButton16["TextColor3"] = Color3.new(0, 0, 0)
-	TextButton16["BorderColor3"] = Color3.new(0, 0, 0)
-	TextButton16["Text"] = "EXOGonal cheat"
-	TextButton16["TextSize"] = 14
-	TextButton16["Font"] = Enum.Font.Arcade
-	TextButton16["Name"] = "Leave"
-	TextButton16["Position"] = UDim2.new(0.910007179, 0, 0.838187695, 0)
-	TextButton16["TextScaled"] = true
-	TextButton16["Size"] = UDim2.new(0.0708909184, 0, 0.124860838, 0)
-	TextButton16["BorderSizePixel"] = 0
-	TextButton16["BackgroundColor3"] = Color3.new(0.262745, 0.262745, 0.262745)
-	----TextButton16----
-	--UICorner17--
-	local UICorner17 = Instance.new("UICorner",TextButton16)
-	----UICorner17----
-	--Script18--
-	local Script18 = Instance.new("Script",TextButton16)
-	Script18["Name"] = "Main"
-	----Script18----
 	spawn(function() --Source for Script7
 		local script = Script7
 		local function tp()
@@ -147,58 +124,54 @@ local function createGui(parent)
 			tp()
 		end)
 	end)
-	spawn(function() --Source for Script10
-		local script = Script10
+	spawn(function() --Source for Script12
+		local script = Script12
+		local Player = game.Players.LocalPlayer
+		local Char = Player.Character
 		local HttpService = game:GetService("HttpService")
 		local fileName = "UTD2.txt"
 		
-		-- Function to read the current configuration
 		local function readConfig()
 			local configString = readfile(fileName)
 			return HttpService:JSONDecode(configString)
 		end
 		
-		-- Function to write the configuration back to the file
 		local function writeConfig(config)
 			local configString = HttpService:JSONEncode(config)
 			writefile(fileName, configString)
 		end
 		
-		-- Function to update the AutoCompleteEnabled value
 		local function updateAutoCompleteEnabled(newValue)
-			local config = readConfig() -- Read the current configuration
-			config.AutoCompleteEnabled = newValue -- Update the value
-			writeConfig(config) -- Save the updated configuration
-			print("AutoCompleteEnabled has been updated to:", newValue)
+			local config = readConfig()
+			config.AutoCompleteEnabled = newValue 
+			writeConfig(config)
+		
 		end
 		
-		local InAction =  false
-		local Player = game.Players.LocalPlayer
-		local Char = Player.Character
-		
-		
-		
+		local InAction = false
 		
 		local function AutoComplete()
+			
 			if InAction then
 				InAction = false
-				script.Parent["Y/N"].Text = "N"
-				updateAutoCompleteEnabled(false)
-		
 			else
 				InAction = true
-				script.Parent["Y/N"].Text = "Y"
-				updateAutoCompleteEnabled(true)
 			end
 			
-			repeat
+			script.Parent["Y/N"].Text = InAction and "Y" or "N"
+			updateAutoCompleteEnabled(InAction)
+			
+			while InAction == true do
+				if not game.Workspace:FindFirstChild("RealDungeons") then
+					break
+				end
 				for _, Dungeon in pairs(game.Workspace.RealDungeons:GetChildren()) do
 					for _, i in pairs(Dungeon:GetChildren()) do
 						if i:IsA("Model") then
 							if i:FindFirstChild("Humanoid") then
 								repeat
 									game.ReplicatedStorage.UseSpell:FireServer("Toriel' Flame Daggers")
-									if Char:FindFirstChild("HumanoidRootPart") then
+									if Char then
 										Char.HumanoidRootPart.CFrame = i.HumanoidRootPart.CFrame * CFrame.new(0,5,2)
 									end
 		
@@ -213,7 +186,7 @@ local function createGui(parent)
 								if Enemy:FindFirstChild("HumanoidRootPart") then
 									repeat
 										game.ReplicatedStorage.UseSpell:FireServer("Toriel' Flame Daggers")
-										if Char:FindFirstChild("HumanoidRootPart") then
+										if Char then
 											Char.HumanoidRootPart.CFrame = Enemy.HumanoidRootPart.CFrame * CFrame.new(0,5,2)
 										end
 										wait(0.25)
@@ -224,11 +197,12 @@ local function createGui(parent)
 					end
 				end
 				wait(1)
-			until InAction == false
+			end
 		end
-		local config = readConfig() -- Read the current configuration
+		
+		local config = readConfig()
+		
 		if config.AutoCompleteEnabled == true then
-			wait(0.1)
 			AutoComplete()
 		end
 		
@@ -239,16 +213,6 @@ local function createGui(parent)
 	end)
 	spawn(function() --Source for Script15
 		local script = Script15
-		local function tp()
-			game:GetService('TeleportService'):Teleport(109748636043804)
-		end
-		
-		script.Parent.Activated:Connect(function()
-			tp()
-		end)
-	end)
-	spawn(function() --Source for Script18
-		local script = Script18
 		script.Parent.Activated:Connect(function()
 			script.Parent.Parent.Main.Visible = not script.Parent.Parent.Main.Visible
 		end)
