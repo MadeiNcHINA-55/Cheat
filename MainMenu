@@ -1,6 +1,7 @@
+local Player = game.Players.LocalPlayer
 local function createGui(parent)
 	--ScreenGui1--
-	local ScreenGui1 = Instance.new("ScreenGui",parent)
+	local ScreenGui1 = Instance.new("ScreenGui",Player.PlayerGui)
 	ScreenGui1["Name"] = "Main"
 	ScreenGui1["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling
 	----ScreenGui1----
@@ -218,4 +219,3 @@ local function createGui(parent)
 		end)
 	end)
 end
-createGui(game.CoreGui) --coregui by default you should but change it
