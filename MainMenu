@@ -19,7 +19,7 @@ local UICorner_5 = Instance.new("UICorner")
 --Properties:
 
 Main.Name = "Main"
-Main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Main.Parent = game.ServerStorage
 Main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Main_2.Name = "Main"
@@ -112,7 +112,7 @@ UICorner_5.Parent = Leave
 
 -- Scripts:
 
-local function OTHBUWX_fake_script() -- DungeonPlace.LocalScript 
+local function GHJG_fake_script() -- DungeonPlace.LocalScript 
 	local script = Instance.new('LocalScript', DungeonPlace)
 
 	local function tp()
@@ -123,8 +123,8 @@ local function OTHBUWX_fake_script() -- DungeonPlace.LocalScript
 		tp()
 	end)
 end
-coroutine.wrap(OTHBUWX_fake_script)()
-local function RQCESJ_fake_script() -- AutoComplete.LocalScript 
+coroutine.wrap(GHJG_fake_script)()
+local function GTXSR_fake_script() -- AutoComplete.LocalScript 
 	local script = Instance.new('LocalScript', AutoComplete)
 
 	local Player = game.Players.LocalPlayer
@@ -166,7 +166,8 @@ local function RQCESJ_fake_script() -- AutoComplete.LocalScript
 			if not game.Workspace:FindFirstChild("RealDungeons") then
 				break
 			end
-			for _, Dungeon in pairs(game.Workspace.RealDungeons:GetChildren()) do 
+			for _, Dungeon in pairs(game.Workspace.RealDungeons:GetChildren()) do
+				if Dungeon.Name ~= game.ReplicatedStorage.ActiveDungeon.Value then return end
 				for _, D in pairs(Dungeon.Areas:GetChildren()) do
 					for _, Enemy in pairs(D:GetChildren()) do
 						if Enemy:IsA("Model") then
@@ -182,20 +183,20 @@ local function RQCESJ_fake_script() -- AutoComplete.LocalScript
 						end
 					end
 				end
-			end
-			for _, i in pairs(Dungeon:GetChildren()) do
-				if i:IsA("Model") then
-					if i:FindFirstChild("Humanoid") then
-						repeat
-							game.ReplicatedStorage.UseSpell:FireServer("Toriel' Flame Daggers")
-							if Char then
-								Char.HumanoidRootPart.CFrame = i.HumanoidRootPart.CFrame * CFrame.new(0,5,2)
-							end
-
-							wait(0.25)
-						until not i:FindFirstChild("Humanoid") or not i:FindFirstChild("HumanoidRootPart")
+				for _, i in pairs(Dungeon:GetChildren()) do
+					if i:IsA("Model") then
+						if i:FindFirstChild("Humanoid") then
+							repeat
+								game.ReplicatedStorage.UseSpell:FireServer("Toriel' Flame Daggers")
+								if Char then
+									Char.HumanoidRootPart.CFrame = i.HumanoidRootPart.CFrame * CFrame.new(0,5,2)
+								end
+	
+								wait(0.25)
+							until not i:FindFirstChild("Humanoid") or not i:FindFirstChild("HumanoidRootPart")
+						end
 					end
-				end
+				end 
 			end
 			wait(1)
 		end
@@ -212,12 +213,12 @@ local function RQCESJ_fake_script() -- AutoComplete.LocalScript
 		AutoComplete()
 	end)
 end
-coroutine.wrap(RQCESJ_fake_script)()
-local function BHEPJAX_fake_script() -- Leave.LocalScript 
+coroutine.wrap(GTXSR_fake_script)()
+local function EVJL_fake_script() -- Leave.LocalScript 
 	local script = Instance.new('LocalScript', Leave)
 
 	script.Parent.Activated:Connect(function()
 		script.Parent.Parent.Main.Visible = not script.Parent.Parent.Main.Visible
 	end)
 end
-coroutine.wrap(BHEPJAX_fake_script)()
+coroutine.wrap(EVJL_fake_script)()
