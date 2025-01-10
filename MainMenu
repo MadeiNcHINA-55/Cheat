@@ -151,16 +151,16 @@ local function createGui(parent)
 		local script = Script10
 		local AutoToggle = false
 		local function AutoComplete()
+			AutoToggle = true
 			if AutoToggle then 
-				
+		
 				AutoToggle = false
 				script.Parent["Y/N"].Text = "N"
 		
 				return
 			else
-				script.Parent["Y/N"].Text = "Y"
+				script.Parent["Y/N"].Text = "y"
 			end
-			AutoToggle = true
 			repeat
 				for _, Dungeon in pairs(game.Workspace.RealDungeons:GetChildren()) do
 					for _, i in pairs(Dungeon:GetChildren()) do
