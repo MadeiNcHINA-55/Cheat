@@ -32,3 +32,4 @@ end
 
 
 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/MadeiNcHINA-55/Cheat/refs/heads/main/MainMenu"))()
