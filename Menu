@@ -30,6 +30,6 @@ else
 	end
 end
 
-if game.GameId == "129688590143639" then
+
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/MadeiNcHINA-55/Cheat/refs/heads/main/MainMenu"))()
-end
+
