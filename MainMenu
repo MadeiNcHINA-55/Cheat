@@ -229,9 +229,7 @@ local function createGui(parent)
 		local config = readConfig() -- Read the current configuration
 		if config.AutoCompleteEnabled == true then
 			wait(0.1)
-			InAction = true
 			AutoComplete()
-		
 		end
 		
 		
