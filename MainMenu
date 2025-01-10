@@ -166,21 +166,7 @@ local function RQCESJ_fake_script() -- AutoComplete.LocalScript
 			if not game.Workspace:FindFirstChild("RealDungeons") then
 				break
 			end
-			for _, Dungeon in pairs(game.Workspace.RealDungeons:GetChildren()) do
-				for _, i in pairs(Dungeon:GetChildren()) do
-					if i:IsA("Model") then
-						if i:FindFirstChild("Humanoid") then
-							repeat
-								game.ReplicatedStorage.UseSpell:FireServer("Toriel' Flame Daggers")
-								if Char then
-									Char.HumanoidRootPart.CFrame = i.HumanoidRootPart.CFrame * CFrame.new(0,5,2)
-								end
-	
-								wait(0.25)
-							until not i:FindFirstChild("Humanoid") or not i:FindFirstChild("HumanoidRootPart")
-						end
-					end
-				end 
+			for _, Dungeon in pairs(game.Workspace.RealDungeons:GetChildren()) do 
 				for _, D in pairs(Dungeon.Areas:GetChildren()) do
 					for _, Enemy in pairs(D:GetChildren()) do
 						if Enemy:IsA("Model") then
@@ -194,6 +180,20 @@ local function RQCESJ_fake_script() -- AutoComplete.LocalScript
 								until not Enemy:FindFirstChild("Humanoid") or not Enemy:FindFirstChild("HumanoidRootPart")
 							end
 						end
+					end
+				end
+			end
+			for _, i in pairs(Dungeon:GetChildren()) do
+				if i:IsA("Model") then
+					if i:FindFirstChild("Humanoid") then
+						repeat
+							game.ReplicatedStorage.UseSpell:FireServer("Toriel' Flame Daggers")
+							if Char then
+								Char.HumanoidRootPart.CFrame = i.HumanoidRootPart.CFrame * CFrame.new(0,5,2)
+							end
+
+							wait(0.25)
+						until not i:FindFirstChild("Humanoid") or not i:FindFirstChild("HumanoidRootPart")
 					end
 				end
 			end
