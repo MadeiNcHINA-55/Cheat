@@ -160,8 +160,6 @@ local function createGui(parent)
 			end
 			
 			repeat
-				if InAction then return end
-				
 				wait(1)
 				for _, Dungeon in pairs(game.Workspace.RealDungeons:GetChildren()) do
 					for _, i in pairs(Dungeon:GetChildren()) do
