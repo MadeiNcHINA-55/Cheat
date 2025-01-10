@@ -4,7 +4,8 @@ local function createGui(parent)
 	local ScreenGui1 = Instance.new("ScreenGui",Player.PlayerGui)
 	ScreenGui1["Name"] = "Main"
 	ScreenGui1["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling
-	----ScreenGui1----
+	ScreenGui1.Enable = true
+    ----ScreenGui1----
 	--Frame2--
 	local Frame2 = Instance.new("Frame",ScreenGui1)
 	Frame2["Name"] = "Main"
