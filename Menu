@@ -1,35 +1,35 @@
 local config = {
-    Version = 1,  -- The current version of the config
-    AutoCompleteEnabled = false,
+	Version = 1,  -- The current version of the config
+	AutoCompleteEnabled = false,
 }
 
 local fileName = "UTD2.txt"
 local fileExists = pcall(function()
-    readfile(fileName)
+	readfile(fileName)
 end)
 
 if not fileExists then
 
-    local configString = game:GetService("HttpService"):JSONEncode(config)
+	local configString = game:GetService("HttpService"):JSONEncode(config)
 
 
-    writefile(fileName, configString)
-    print("File created with default config.")
+	writefile(fileName, configString)
+	print("File created with default config.")
 else
 
-    local currentConfigString = readfile(fileName)
-    local currentConfig = game:GetService("HttpService"):JSONDecode(currentConfigString)
+	local currentConfigString = readfile(fileName)
+	local currentConfig = game:GetService("HttpService"):JSONDecode(currentConfigString)
 
-    if currentConfig.Version < config.Version then
-        currentConfig.Version = config.Version
-        currentConfig.AutoCompleteEnabled = false
-        local updatedConfigString = game:GetService("HttpService"):JSONEncode(currentConfig)
-        writefile(fileName, updatedConfigString)
-    else
-        print("Config is up to date.")
-    end
+	if currentConfig.Version < config.Version then
+		currentConfig.Version = config.Version
+		currentConfig.AutoCompleteEnabled = false
+		local updatedConfigString = game:GetService("HttpService"):JSONEncode(currentConfig)
+		writefile(fileName, updatedConfigString)
+	else
+		print("Config is up to date.")
+	end
 end
 
-
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/MadeiNcHINA-55/Cheat/refs/heads/main/MainMenu"))()
+if game.GameId == "109748636043804" then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/MadeiNcHINA-55/Cheat/refs/heads/main/MainMenu"))()
+end
