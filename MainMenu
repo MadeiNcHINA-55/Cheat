@@ -19,7 +19,7 @@ local UICorner_5 = Instance.new("UICorner")
 --Properties:
 
 Main.Name = "Main"
-Main.Parent = game.ServerStorage
+Main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 Main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Main_2.Name = "Main"
@@ -112,7 +112,7 @@ UICorner_5.Parent = Leave
 
 -- Scripts:
 
-local function GHJG_fake_script() -- DungeonPlace.LocalScript 
+local function FRAXWT_fake_script() -- DungeonPlace.LocalScript 
 	local script = Instance.new('LocalScript', DungeonPlace)
 
 	local function tp()
@@ -123,8 +123,8 @@ local function GHJG_fake_script() -- DungeonPlace.LocalScript
 		tp()
 	end)
 end
-coroutine.wrap(GHJG_fake_script)()
-local function GTXSR_fake_script() -- AutoComplete.LocalScript 
+coroutine.wrap(FRAXWT_fake_script)()
+local function XHDE_fake_script() -- AutoComplete.LocalScript 
 	local script = Instance.new('LocalScript', AutoComplete)
 
 	local Player = game.Players.LocalPlayer
@@ -213,12 +213,12 @@ local function GTXSR_fake_script() -- AutoComplete.LocalScript
 		AutoComplete()
 	end)
 end
-coroutine.wrap(GTXSR_fake_script)()
-local function EVJL_fake_script() -- Leave.LocalScript 
+coroutine.wrap(XHDE_fake_script)()
+local function FZXJZYV_fake_script() -- Leave.LocalScript 
 	local script = Instance.new('LocalScript', Leave)
 
 	script.Parent.Activated:Connect(function()
 		script.Parent.Parent.Main.Visible = not script.Parent.Parent.Main.Visible
 	end)
 end
-coroutine.wrap(EVJL_fake_script)()
+coroutine.wrap(FZXJZYV_fake_script)()
