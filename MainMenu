@@ -149,31 +149,61 @@ local function createGui(parent)
 	end)
 	spawn(function() --Source for Script10
 		local script = Script10
+		local HttpService = game:GetService("HttpService")
+		local fileName = "UTD2.txt"
+		
+		-- Function to read the current configuration
+		local function readConfig()
+			local configString = readfile(fileName)
+			return HttpService:JSONDecode(configString)
+		end
+		
+		-- Function to write the configuration back to the file
+		local function writeConfig(config)
+			local configString = HttpService:JSONEncode(config)
+			writefile(fileName, configString)
+		end
+		
+		-- Function to update the AutoCompleteEnabled value
+		local function updateAutoCompleteEnabled(newValue)
+			local config = readConfig() -- Read the current configuration
+			config.AutoCompleteEnabled = newValue -- Update the value
+			writeConfig(config) -- Save the updated configuration
+			print("AutoCompleteEnabled has been updated to:", newValue)
+		end
+		
 		local InAction =  false
+		local Player = game.Players.LocalPlayer
+		local Char = Player.Character
+		
+		
+		
+		
 		local function AutoComplete()
 			if InAction then
 				InAction = false
 				script.Parent["Y/N"].Text = "N"
+				updateAutoCompleteEnabled(false)
+		
 			else
 				InAction = true
 				script.Parent["Y/N"].Text = "Y"
+				updateAutoCompleteEnabled(true)
 			end
 			
 			repeat
-				wait(1)
 				for _, Dungeon in pairs(game.Workspace.RealDungeons:GetChildren()) do
 					for _, i in pairs(Dungeon:GetChildren()) do
 						if i:IsA("Model") then
 							if i:FindFirstChild("Humanoid") then
 								repeat
 									game.ReplicatedStorage.UseSpell:FireServer("Toriel' Flame Daggers")
-									if game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
-										game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = i.HumanoidRootPart.CFrame * CFrame.new(0,5,2)
+									if Char:FindFirstChild("HumanoidRootPart") then
+										Char.HumanoidRootPart.CFrame = i.HumanoidRootPart.CFrame * CFrame.new(0,5,2)
 									end
-									
+		
 									wait(0.25)
 								until not i:FindFirstChild("Humanoid") or not i:FindFirstChild("HumanoidRootPart")
-								break
 							end
 						end
 					end 
@@ -183,23 +213,30 @@ local function createGui(parent)
 								if Enemy:FindFirstChild("HumanoidRootPart") then
 									repeat
 										game.ReplicatedStorage.UseSpell:FireServer("Toriel' Flame Daggers")
-										if game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
-											game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = i.HumanoidRootPart.CFrame * CFrame.new(0,5,2)
+										if Char:FindFirstChild("HumanoidRootPart") then
+											Char.HumanoidRootPart.CFrame = Enemy.HumanoidRootPart.CFrame * CFrame.new(0,5,2)
 										end
 										wait(0.25)
 									until not Enemy:FindFirstChild("Humanoid") or not Enemy:FindFirstChild("HumanoidRootPart")
-									break	
 								end
 							end
 						end
 					end
 				end
-			until not InAction
+				wait(1)
+			until InAction == false
+		end
+		local config = readConfig() -- Read the current configuration
+		if config.AutoCompleteEnabled == true then
+			wait(0.1)
+			InAction = true
+			AutoComplete()
+		
 		end
 		
 		
 		script.Parent.Activated:Connect(function()
-		
+			AutoComplete()
 		end)
 	end)
 	spawn(function() --Source for Script15
