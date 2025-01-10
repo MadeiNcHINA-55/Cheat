@@ -154,12 +154,11 @@ local function createGui(parent)
 			if AutoToggle then 
 				
 				AutoToggle = false
-				if AutoToggle then
-					script.Parent["Y/N"].Text = "Y"
-				else
-					script.Parent["Y/N"].Text = "N"
-				end
+				script.Parent["Y/N"].Text = "N"
+		
 				return
+			else
+				script.Parent["Y/N"].Text = "Y"
 			end
 			AutoToggle = true
 			repeat
