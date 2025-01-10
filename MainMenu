@@ -1,222 +1,223 @@
-local Player = game.Players.LocalPlayer
-local function createGui(parent)
-	--ScreenGui1--
-	local ScreenGui1 = Instance.new("ScreenGui",Player.PlayerGui)
-	ScreenGui1["Name"] = "Main"
-	ScreenGui1["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling
-	ScreenGui1.Enable = true
-    ----ScreenGui1----
-	--Frame2--
-	local Frame2 = Instance.new("Frame",ScreenGui1)
-	Frame2["Name"] = "Main"
-	Frame2["Position"] = UDim2.new(0.307177663, 0, 0.160508081, 0)
-	Frame2["BorderColor3"] = Color3.new(0, 0, 0)
-	Frame2["Size"] = UDim2.new(0.384413898, 0, 0.677829087, 0)
-	Frame2["BorderSizePixel"] = 0
-	Frame2["BackgroundColor3"] = Color3.new(0.137255, 0.137255, 0.137255)
-	----Frame2----
-	--UICorner3--
-	local UICorner3 = Instance.new("UICorner",Frame2)
-	----UICorner3----
-	--TextLabel4--
-	local TextLabel4 = Instance.new("TextLabel",Frame2)
-	TextLabel4["TextWrapped"] = true
-	TextLabel4["TextColor3"] = Color3.new(1, 1, 1)
-	TextLabel4["BorderColor3"] = Color3.new(0, 0, 0)
-	TextLabel4["Text"] = "ExaGonal Cheat"
-	TextLabel4["TextSize"] = 14
-	TextLabel4["Font"] = Enum.Font.Arcade
-	TextLabel4["BackgroundTransparency"] = 1
-	TextLabel4["TextScaled"] = true
-	TextLabel4["Size"] = UDim2.new(1, 0, 0.0851788744, 0)
-	TextLabel4["Name"] = "TextTitle"
-	TextLabel4["BorderSizePixel"] = 0
-	TextLabel4["BackgroundColor3"] = Color3.new(1, 1, 1)
-	----TextLabel4----
-	--TextButton5--
-	local TextButton5 = Instance.new("TextButton",Frame2)
-	TextButton5["TextWrapped"] = true
-	TextButton5["TextColor3"] = Color3.new(0, 0, 0)
-	TextButton5["BorderColor3"] = Color3.new(0, 0, 0)
-	TextButton5["Text"] = "TP TO DUNGEON PLACE"
-	TextButton5["TextSize"] = 14
-	TextButton5["Font"] = Enum.Font.Arcade
-	TextButton5["Name"] = "DungeonPlace"
-	TextButton5["Position"] = UDim2.new(0.337308347, 0, 0.136286199, 0)
-	TextButton5["TextScaled"] = true
-	TextButton5["Size"] = UDim2.new(0.340715498, 0, 0.0851788744, 0)
-	TextButton5["BorderSizePixel"] = 0
-	TextButton5["BackgroundColor3"] = Color3.new(0.262745, 0.262745, 0.262745)
-	----TextButton5----
-	--UICorner6--
-	local UICorner6 = Instance.new("UICorner",TextButton5)
-	----UICorner6----
-	--Script7--
-	local Script7 = Instance.new("Script",TextButton5)
-	Script7["Name"] = "Main"
-	----Script7----
-	--TextButton8--
-	local TextButton8 = Instance.new("TextButton",Frame2)
-	TextButton8["TextWrapped"] = true
-	TextButton8["TextColor3"] = Color3.new(0, 0, 0)
-	TextButton8["BorderColor3"] = Color3.new(0, 0, 0)
-	TextButton8["Text"] = "AutoComplete current dungeon"
-	TextButton8["TextSize"] = 14
-	TextButton8["Font"] = Enum.Font.Arcade
-	TextButton8["Name"] = "AutoComplete"
-	TextButton8["Position"] = UDim2.new(0.0306643955, 0, 0.894378185, 0)
-	TextButton8["TextScaled"] = true
-	TextButton8["Size"] = UDim2.new(0.340715498, 0, 0.0851788744, 0)
-	TextButton8["BorderSizePixel"] = 0
-	TextButton8["BackgroundColor3"] = Color3.new(0.262745, 0.262745, 0.262745)
-	----TextButton8----
-	--UICorner9--
-	local UICorner9 = Instance.new("UICorner",TextButton8)
-	----UICorner9----
-	--TextButton10--
-	local TextButton10 = Instance.new("TextButton",TextButton8)
-	TextButton10["TextWrapped"] = true
-	TextButton10["TextColor3"] = Color3.new(0, 0, 0)
-	TextButton10["BorderColor3"] = Color3.new(0, 0, 0)
-	TextButton10["Text"] = "Y/N"
-	TextButton10["TextSize"] = 14
-	TextButton10["Font"] = Enum.Font.Arcade
-	TextButton10["Name"] = "Y/N"
-	TextButton10["Position"] = UDim2.new(1.10065305, 0, 0.0449450687, 0)
-	TextButton10["TextScaled"] = true
-	TextButton10["Size"] = UDim2.new(0.340289623, 0, 0.905179441, 0)
-	TextButton10["BorderSizePixel"] = 0
-	TextButton10["BackgroundColor3"] = Color3.new(0.262745, 0.262745, 0.262745)
-	----TextButton10----
-	--UICorner11--
-	local UICorner11 = Instance.new("UICorner",TextButton10)
-	----UICorner11----
-	--Script12--
-	local Script12 = Instance.new("Script",TextButton8)
-	----Script12----
-	--TextButton13--
-	local TextButton13 = Instance.new("TextButton",ScreenGui1)
-	TextButton13["TextWrapped"] = true
-	TextButton13["TextColor3"] = Color3.new(0, 0, 0)
-	TextButton13["BorderColor3"] = Color3.new(0, 0, 0)
-	TextButton13["Text"] = "EXOGonal cheat"
-	TextButton13["TextSize"] = 14
-	TextButton13["Font"] = Enum.Font.Arcade
-	TextButton13["Name"] = "Leave"
-	TextButton13["Position"] = UDim2.new(0.910007179, 0, 0.838187695, 0)
-	TextButton13["TextScaled"] = true
-	TextButton13["Size"] = UDim2.new(0.0708909184, 0, 0.124860838, 0)
-	TextButton13["BorderSizePixel"] = 0
-	TextButton13["BackgroundColor3"] = Color3.new(0.262745, 0.262745, 0.262745)
-	----TextButton13----
-	--UICorner14--
-	local UICorner14 = Instance.new("UICorner",TextButton13)
-	----UICorner14----
-	--Script15--
-	local Script15 = Instance.new("Script",TextButton13)
-	Script15["Name"] = "Main"
-	----Script15----
-	spawn(function() --Source for Script7
-		local script = Script7
-		local function tp()
-			game:GetService('TeleportService'):Teleport(109748636043804)
-		end
-		
-		script.Parent.Activated:Connect(function()
-			tp()
-		end)
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Main = Instance.new("ScreenGui")
+local Main_2 = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local TextTitle = Instance.new("TextLabel")
+local DungeonPlace = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local AutoComplete = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local YN = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local Leave = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+
+--Properties:
+
+Main.Name = "Main"
+Main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Main_2.Name = "Main"
+Main_2.Parent = Main
+Main_2.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Main_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Main_2.BorderSizePixel = 0
+Main_2.Position = UDim2.new(0.307177663, 0, 0.160508081, 0)
+Main_2.Size = UDim2.new(0.384413898, 0, 0.677829087, 0)
+
+UICorner.Parent = Main_2
+
+TextTitle.Name = "TextTitle"
+TextTitle.Parent = Main_2
+TextTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextTitle.BackgroundTransparency = 1.000
+TextTitle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextTitle.BorderSizePixel = 0
+TextTitle.Size = UDim2.new(1, 0, 0.0851788744, 0)
+TextTitle.Font = Enum.Font.Arcade
+TextTitle.Text = "ExaGonal Cheat"
+TextTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextTitle.TextScaled = true
+TextTitle.TextSize = 14.000
+TextTitle.TextWrapped = true
+
+DungeonPlace.Name = "DungeonPlace"
+DungeonPlace.Parent = Main_2
+DungeonPlace.BackgroundColor3 = Color3.fromRGB(66, 66, 66)
+DungeonPlace.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DungeonPlace.BorderSizePixel = 0
+DungeonPlace.Position = UDim2.new(0.337308347, 0, 0.136286199, 0)
+DungeonPlace.Size = UDim2.new(0.340715498, 0, 0.0851788744, 0)
+DungeonPlace.Font = Enum.Font.Arcade
+DungeonPlace.Text = "TP TO DUNGEON PLACE"
+DungeonPlace.TextColor3 = Color3.fromRGB(0, 0, 0)
+DungeonPlace.TextScaled = true
+DungeonPlace.TextSize = 14.000
+DungeonPlace.TextWrapped = true
+
+UICorner_2.Parent = DungeonPlace
+
+AutoComplete.Name = "AutoComplete"
+AutoComplete.Parent = Main_2
+AutoComplete.BackgroundColor3 = Color3.fromRGB(66, 66, 66)
+AutoComplete.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AutoComplete.BorderSizePixel = 0
+AutoComplete.Position = UDim2.new(0.0306643955, 0, 0.894378185, 0)
+AutoComplete.Size = UDim2.new(0.340715498, 0, 0.0851788744, 0)
+AutoComplete.Font = Enum.Font.Arcade
+AutoComplete.Text = "AutoComplete current dungeon"
+AutoComplete.TextColor3 = Color3.fromRGB(0, 0, 0)
+AutoComplete.TextScaled = true
+AutoComplete.TextSize = 14.000
+AutoComplete.TextWrapped = true
+
+UICorner_3.Parent = AutoComplete
+
+YN.Name = "Y/N"
+YN.Parent = AutoComplete
+YN.BackgroundColor3 = Color3.fromRGB(66, 66, 66)
+YN.BorderColor3 = Color3.fromRGB(0, 0, 0)
+YN.BorderSizePixel = 0
+YN.Position = UDim2.new(1.10065305, 0, 0.0449450687, 0)
+YN.Size = UDim2.new(0.340289623, 0, 0.905179441, 0)
+YN.Font = Enum.Font.Arcade
+YN.Text = "Y/N"
+YN.TextColor3 = Color3.fromRGB(0, 0, 0)
+YN.TextScaled = true
+YN.TextSize = 14.000
+YN.TextWrapped = true
+
+UICorner_4.Parent = YN
+
+Leave.Name = "Leave"
+Leave.Parent = Main
+Leave.BackgroundColor3 = Color3.fromRGB(66, 66, 66)
+Leave.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Leave.BorderSizePixel = 0
+Leave.Position = UDim2.new(0.910007179, 0, 0.838187695, 0)
+Leave.Size = UDim2.new(0.0708909184, 0, 0.124860838, 0)
+Leave.Font = Enum.Font.Arcade
+Leave.Text = "EXOGonal cheat"
+Leave.TextColor3 = Color3.fromRGB(0, 0, 0)
+Leave.TextScaled = true
+Leave.TextSize = 14.000
+Leave.TextWrapped = true
+
+UICorner_5.Parent = Leave
+
+-- Scripts:
+
+local function OTHBUWX_fake_script() -- DungeonPlace.LocalScript 
+	local script = Instance.new('LocalScript', DungeonPlace)
+
+	local function tp()
+		game:GetService('TeleportService'):Teleport(109748636043804)
+	end
+	
+	script.Parent.Activated:Connect(function()
+		tp()
 	end)
-	spawn(function() --Source for Script12
-		local script = Script12
-		local Player = game.Players.LocalPlayer
-		local Char = Player.Character
-		local HttpService = game:GetService("HttpService")
-		local fileName = "UTD2.txt"
-		
-		local function readConfig()
-			local configString = readfile(fileName)
-			return HttpService:JSONDecode(configString)
+end
+coroutine.wrap(OTHBUWX_fake_script)()
+local function RQCESJ_fake_script() -- AutoComplete.LocalScript 
+	local script = Instance.new('LocalScript', AutoComplete)
+
+	local Player = game.Players.LocalPlayer
+	local Char = Player.Character
+	local HttpService = game:GetService("HttpService")
+	local fileName = "UTD2.txt"
+	
+	local function readConfig()
+		local configString = readfile(fileName)
+		return HttpService:JSONDecode(configString)
+	end
+	
+	local function writeConfig(config)
+		local configString = HttpService:JSONEncode(config)
+		writefile(fileName, configString)
+	end
+	
+	local function updateAutoCompleteEnabled(newValue)
+		local config = readConfig()
+		config.AutoCompleteEnabled = newValue 
+		writeConfig(config)
+	
+	end
+	
+	local InAction = false
+	
+	local function AutoComplete()
+	
+		if InAction then
+			InAction = false
+		else
+			InAction = true
 		end
-		
-		local function writeConfig(config)
-			local configString = HttpService:JSONEncode(config)
-			writefile(fileName, configString)
-		end
-		
-		local function updateAutoCompleteEnabled(newValue)
-			local config = readConfig()
-			config.AutoCompleteEnabled = newValue 
-			writeConfig(config)
-		
-		end
-		
-		local InAction = false
-		
-		local function AutoComplete()
-			
-			if InAction then
-				InAction = false
-			else
-				InAction = true
+	
+		script.Parent["Y/N"].Text = InAction and "Y" or "N"
+		updateAutoCompleteEnabled(InAction)
+	
+		while InAction == true do
+			if not game.Workspace:FindFirstChild("RealDungeons") then
+				break
 			end
-			
-			script.Parent["Y/N"].Text = InAction and "Y" or "N"
-			updateAutoCompleteEnabled(InAction)
-			
-			while InAction == true do
-				if not game.Workspace:FindFirstChild("RealDungeons") then
-					break
-				end
-				for _, Dungeon in pairs(game.Workspace.RealDungeons:GetChildren()) do
-					for _, i in pairs(Dungeon:GetChildren()) do
-						if i:IsA("Model") then
-							if i:FindFirstChild("Humanoid") then
+			for _, Dungeon in pairs(game.Workspace.RealDungeons:GetChildren()) do
+				for _, i in pairs(Dungeon:GetChildren()) do
+					if i:IsA("Model") then
+						if i:FindFirstChild("Humanoid") then
+							repeat
+								game.ReplicatedStorage.UseSpell:FireServer("Toriel' Flame Daggers")
+								if Char then
+									Char.HumanoidRootPart.CFrame = i.HumanoidRootPart.CFrame * CFrame.new(0,5,2)
+								end
+	
+								wait(0.25)
+							until not i:FindFirstChild("Humanoid") or not i:FindFirstChild("HumanoidRootPart")
+						end
+					end
+				end 
+				for _, D in pairs(Dungeon.Areas:GetChildren()) do
+					for _, Enemy in pairs(D:GetChildren()) do
+						if Enemy:IsA("Model") then
+							if Enemy:FindFirstChild("HumanoidRootPart") then
 								repeat
 									game.ReplicatedStorage.UseSpell:FireServer("Toriel' Flame Daggers")
 									if Char then
-										Char.HumanoidRootPart.CFrame = i.HumanoidRootPart.CFrame * CFrame.new(0,5,2)
+										Char.HumanoidRootPart.CFrame = Enemy.HumanoidRootPart.CFrame * CFrame.new(0,5,2)
 									end
-		
 									wait(0.25)
-								until not i:FindFirstChild("Humanoid") or not i:FindFirstChild("HumanoidRootPart")
-							end
-						end
-					end 
-					for _, D in pairs(Dungeon.Areas:GetChildren()) do
-						for _, Enemy in pairs(D:GetChildren()) do
-							if Enemy:IsA("Model") then
-								if Enemy:FindFirstChild("HumanoidRootPart") then
-									repeat
-										game.ReplicatedStorage.UseSpell:FireServer("Toriel' Flame Daggers")
-										if Char then
-											Char.HumanoidRootPart.CFrame = Enemy.HumanoidRootPart.CFrame * CFrame.new(0,5,2)
-										end
-										wait(0.25)
-									until not Enemy:FindFirstChild("Humanoid") or not Enemy:FindFirstChild("HumanoidRootPart")
-								end
+								until not Enemy:FindFirstChild("Humanoid") or not Enemy:FindFirstChild("HumanoidRootPart")
 							end
 						end
 					end
 				end
-				wait(1)
 			end
+			wait(1)
 		end
-		
-		local config = readConfig()
-		
-		if config.AutoCompleteEnabled == true then
-			AutoComplete()
-		end
-		
-		
-		script.Parent.Activated:Connect(function()
-			AutoComplete()
-		end)
-	end)
-	spawn(function() --Source for Script15
-		local script = Script15
-		script.Parent.Activated:Connect(function()
-			script.Parent.Parent.Main.Visible = not script.Parent.Parent.Main.Visible
-		end)
+	end
+	
+	local config = readConfig()
+	
+	if config.AutoCompleteEnabled == true then
+		AutoComplete()
+	end
+	
+	
+	script.Parent.Activated:Connect(function()
+		AutoComplete()
 	end)
 end
+coroutine.wrap(RQCESJ_fake_script)()
+local function BHEPJAX_fake_script() -- Leave.LocalScript 
+	local script = Instance.new('LocalScript', Leave)
+
+	script.Parent.Activated:Connect(function()
+		script.Parent.Parent.Main.Visible = not script.Parent.Parent.Main.Visible
+	end)
+end
+coroutine.wrap(BHEPJAX_fake_script)()
