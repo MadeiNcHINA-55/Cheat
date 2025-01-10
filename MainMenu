@@ -149,29 +149,33 @@ local function createGui(parent)
 	end)
 	spawn(function() --Source for Script10
 		local script = Script10
-		local AutoToggle = false
+		local InAction =  false
 		local function AutoComplete()
-			AutoToggle = true
-			if AutoToggle then 
-		
-				AutoToggle = false
+			if InAction then
+				InAction = false
 				script.Parent["Y/N"].Text = "N"
-		
-				return
 			else
+				InAction = true
 				script.Parent["Y/N"].Text = "Y"
 			end
+			
 			repeat
-				script.Parent["Y/N"].Text = "Y"
+				if InAction then return end
+				
+				wait(1)
 				for _, Dungeon in pairs(game.Workspace.RealDungeons:GetChildren()) do
 					for _, i in pairs(Dungeon:GetChildren()) do
 						if i:IsA("Model") then
 							if i:FindFirstChild("Humanoid") then
 								repeat
 									game.ReplicatedStorage.UseSpell:FireServer("Toriel' Flame Daggers")
-									game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = i.HumanoidRootPart.CFrame * CFrame.new(0,5,2)
+									if game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
+										game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = i.HumanoidRootPart.CFrame * CFrame.new(0,5,2)
+									end
+									
 									wait(0.25)
 								until not i:FindFirstChild("Humanoid") or not i:FindFirstChild("HumanoidRootPart")
+								break
 							end
 						end
 					end 
@@ -181,20 +185,23 @@ local function createGui(parent)
 								if Enemy:FindFirstChild("HumanoidRootPart") then
 									repeat
 										game.ReplicatedStorage.UseSpell:FireServer("Toriel' Flame Daggers")
-										game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Enemy.HumanoidRootPart.CFrame * CFrame.new(0,5,2)
+										if game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
+											game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = i.HumanoidRootPart.CFrame * CFrame.new(0,5,2)
+										end
 										wait(0.25)
 									until not Enemy:FindFirstChild("Humanoid") or not Enemy:FindFirstChild("HumanoidRootPart")
+									break	
 								end
 							end
 						end
 					end
 				end
-				wait(1)
-			until AutoToggle == false
+			until not InAction
 		end
 		
+		
 		script.Parent.Activated:Connect(function()
-			AutoComplete()
+		
 		end)
 	end)
 	spawn(function() --Source for Script15
