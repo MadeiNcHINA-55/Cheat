@@ -1,0 +1,217 @@
+local function createGui(parent)
+	--ScreenGui1--
+	local ScreenGui1 = Instance.new("ScreenGui",parent)
+	ScreenGui1["Name"] = "Main"
+	ScreenGui1["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling
+	----ScreenGui1----
+	--Frame2--
+	local Frame2 = Instance.new("Frame",ScreenGui1)
+	Frame2["Name"] = "Main"
+	Frame2["Position"] = UDim2.new(0.307177663, 0, 0.160508081, 0)
+	Frame2["BorderColor3"] = Color3.new(0, 0, 0)
+	Frame2["Size"] = UDim2.new(0.384413898, 0, 0.677829087, 0)
+	Frame2["BorderSizePixel"] = 0
+	Frame2["BackgroundColor3"] = Color3.new(0.137255, 0.137255, 0.137255)
+	----Frame2----
+	--UICorner3--
+	local UICorner3 = Instance.new("UICorner",Frame2)
+	----UICorner3----
+	--TextLabel4--
+	local TextLabel4 = Instance.new("TextLabel",Frame2)
+	TextLabel4["TextWrapped"] = true
+	TextLabel4["TextColor3"] = Color3.new(1, 1, 1)
+	TextLabel4["BorderColor3"] = Color3.new(0, 0, 0)
+	TextLabel4["Text"] = "ExaGonal Cheat"
+	TextLabel4["TextSize"] = 14
+	TextLabel4["Font"] = Enum.Font.Arcade
+	TextLabel4["BackgroundTransparency"] = 1
+	TextLabel4["TextScaled"] = true
+	TextLabel4["Size"] = UDim2.new(1, 0, 0.0851788744, 0)
+	TextLabel4["Name"] = "TextTitle"
+	TextLabel4["BorderSizePixel"] = 0
+	TextLabel4["BackgroundColor3"] = Color3.new(1, 1, 1)
+	----TextLabel4----
+	--TextButton5--
+	local TextButton5 = Instance.new("TextButton",Frame2)
+	TextButton5["TextWrapped"] = true
+	TextButton5["TextColor3"] = Color3.new(0, 0, 0)
+	TextButton5["BorderColor3"] = Color3.new(0, 0, 0)
+	TextButton5["Text"] = "TP TO DUNGEON PLACE"
+	TextButton5["TextSize"] = 14
+	TextButton5["Font"] = Enum.Font.Arcade
+	TextButton5["Name"] = "DungeonPlace"
+	TextButton5["Position"] = UDim2.new(0.14480409, 0, 0.168654174, 0)
+	TextButton5["TextScaled"] = true
+	TextButton5["Size"] = UDim2.new(0.340715498, 0, 0.0851788744, 0)
+	TextButton5["BorderSizePixel"] = 0
+	TextButton5["BackgroundColor3"] = Color3.new(0.262745, 0.262745, 0.262745)
+	----TextButton5----
+	--UICorner6--
+	local UICorner6 = Instance.new("UICorner",TextButton5)
+	----UICorner6----
+	--Script7--
+	local Script7 = Instance.new("Script",TextButton5)
+	Script7["Name"] = "Main"
+	----Script7----
+	--TextButton8--
+	local TextButton8 = Instance.new("TextButton",Frame2)
+	TextButton8["TextWrapped"] = true
+	TextButton8["TextColor3"] = Color3.new(0, 0, 0)
+	TextButton8["BorderColor3"] = Color3.new(0, 0, 0)
+	TextButton8["Text"] = "AutoComplete current dungeon"
+	TextButton8["TextSize"] = 14
+	TextButton8["Font"] = Enum.Font.Arcade
+	TextButton8["Name"] = "AutoComplete"
+	TextButton8["Position"] = UDim2.new(0.262350947, 0, 0.304940373, 0)
+	TextButton8["TextScaled"] = true
+	TextButton8["Size"] = UDim2.new(0.340715498, 0, 0.0851788744, 0)
+	TextButton8["BorderSizePixel"] = 0
+	TextButton8["BackgroundColor3"] = Color3.new(0.262745, 0.262745, 0.262745)
+	----TextButton8----
+	--UICorner9--
+	local UICorner9 = Instance.new("UICorner",TextButton8)
+	----UICorner9----
+	--Script10--
+	local Script10 = Instance.new("Script",TextButton8)
+	Script10["Name"] = "Main"
+	----Script10----
+	--TextButton11--
+	local TextButton11 = Instance.new("TextButton",TextButton8)
+	TextButton11["TextWrapped"] = true
+	TextButton11["TextColor3"] = Color3.new(0, 0, 0)
+	TextButton11["BorderColor3"] = Color3.new(0, 0, 0)
+	TextButton11["Text"] = "Y/N"
+	TextButton11["TextSize"] = 14
+	TextButton11["Font"] = Enum.Font.Arcade
+	TextButton11["Name"] = "Y/N"
+	TextButton11["Position"] = UDim2.new(1.10065305, 0, 0.0449450687, 0)
+	TextButton11["TextScaled"] = true
+	TextButton11["Size"] = UDim2.new(0.340289623, 0, 0.905179441, 0)
+	TextButton11["BorderSizePixel"] = 0
+	TextButton11["BackgroundColor3"] = Color3.new(0.262745, 0.262745, 0.262745)
+	----TextButton11----
+	--UICorner12--
+	local UICorner12 = Instance.new("UICorner",TextButton11)
+	----UICorner12----
+	--TextButton13--
+	local TextButton13 = Instance.new("TextButton",Frame2)
+	TextButton13["TextWrapped"] = true
+	TextButton13["TextColor3"] = Color3.new(0, 0, 0)
+	TextButton13["BorderColor3"] = Color3.new(0, 0, 0)
+	TextButton13["Text"] = "TP Mossy Ruin"
+	TextButton13["TextSize"] = 14
+	TextButton13["Font"] = Enum.Font.Arcade
+	TextButton13["Name"] = "TPMOSSY"
+	TextButton13["Position"] = UDim2.new(0.516183972, 0, 0.168654174, 0)
+	TextButton13["TextScaled"] = true
+	TextButton13["Size"] = UDim2.new(0.340715498, 0, 0.0851788744, 0)
+	TextButton13["BorderSizePixel"] = 0
+	TextButton13["BackgroundColor3"] = Color3.new(0.262745, 0.262745, 0.262745)
+	----TextButton13----
+	--UICorner14--
+	local UICorner14 = Instance.new("UICorner",TextButton13)
+	----UICorner14----
+	--Script15--
+	local Script15 = Instance.new("Script",TextButton13)
+	Script15["Name"] = "Main"
+	----Script15----
+	--TextButton16--
+	local TextButton16 = Instance.new("TextButton",ScreenGui1)
+	TextButton16["TextWrapped"] = true
+	TextButton16["TextColor3"] = Color3.new(0, 0, 0)
+	TextButton16["BorderColor3"] = Color3.new(0, 0, 0)
+	TextButton16["Text"] = "EXOGonal cheat"
+	TextButton16["TextSize"] = 14
+	TextButton16["Font"] = Enum.Font.Arcade
+	TextButton16["Name"] = "Leave"
+	TextButton16["Position"] = UDim2.new(0.910007179, 0, 0.838187695, 0)
+	TextButton16["TextScaled"] = true
+	TextButton16["Size"] = UDim2.new(0.0708909184, 0, 0.124860838, 0)
+	TextButton16["BorderSizePixel"] = 0
+	TextButton16["BackgroundColor3"] = Color3.new(0.262745, 0.262745, 0.262745)
+	----TextButton16----
+	--UICorner17--
+	local UICorner17 = Instance.new("UICorner",TextButton16)
+	----UICorner17----
+	--Script18--
+	local Script18 = Instance.new("Script",TextButton16)
+	Script18["Name"] = "Main"
+	----Script18----
+	spawn(function() --Source for Script7
+		local script = Script7
+		local function tp()
+			game:GetService('TeleportService'):Teleport(109748636043804)
+		end
+		
+		script.Parent.Activated:Connect(function()
+			tp()
+		end)
+	end)
+	spawn(function() --Source for Script10
+		local script = Script10
+		local AutoToggle = false
+		local function AutoComplete()
+			if AutoToggle then 
+				
+				AutoToggle = false
+				if AutoToggle then
+					script.Parent["Y/N"].Text = "Y"
+				else
+					script.Parent["Y/N"].Text = "N"
+				end
+				return
+			end
+			AutoToggle = true
+			repeat
+				for _, Dungeon in pairs(game.Workspace.RealDungeons:GetChildren()) do
+					for _, i in pairs(Dungeon:GetChildren()) do
+						if i:IsA("Model") then
+							if i:FindFirstChild("Humanoid") then
+								repeat
+									game.ReplicatedStorage.UseSpell:FireServer("Toriel' Flame Daggers")
+									game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = i.HumanoidRootPart.CFrame * CFrame.new(0,5,2)
+									wait(0.25)
+								until not i:FindFirstChild("Humanoid") or not i:FindFirstChild("HumanoidRootPart")
+							end
+						end
+					end 
+					for _, D in pairs(Dungeon.Areas:GetChildren()) do
+						for _, Enemy in pairs(D:GetChildren()) do
+							if Enemy:IsA("Model") then
+								if Enemy:FindFirstChild("HumanoidRootPart") then
+									repeat
+										game.ReplicatedStorage.UseSpell:FireServer("Toriel' Flame Daggers")
+										game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Enemy.HumanoidRootPart.CFrame * CFrame.new(0,5,2)
+										wait(0.25)
+									until not Enemy:FindFirstChild("Humanoid") or not Enemy:FindFirstChild("HumanoidRootPart")
+								end
+							end
+						end
+					end
+				end
+				wait(1)
+			until AutoToggle == false
+		end
+		
+		script.Parent.Activated:Connect(function()
+			AutoComplete()
+		end)
+	end)
+	spawn(function() --Source for Script15
+		local script = Script15
+		local function tp()
+			game:GetService('TeleportService'):Teleport(109748636043804)
+		end
+		
+		script.Parent.Activated:Connect(function()
+			tp()
+		end)
+	end)
+	spawn(function() --Source for Script18
+		local script = Script18
+		script.Parent.Activated:Connect(function()
+			script.Parent.Parent.Main.Visible = not script.Parent.Parent.Main.Visible
+		end)
+	end)
+end
+createGui(game.CoreGui) --coregui by default you should but change it
