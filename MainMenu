@@ -1,224 +1,88 @@
--- Gui to Lua
--- Version: 3.2
 
--- Instances:
+local Connect = nil
 
-local Main = Instance.new("ScreenGui")
-local Main_2 = Instance.new("Frame")
-local UICorner = Instance.new("UICorner")
-local TextTitle = Instance.new("TextLabel")
-local DungeonPlace = Instance.new("TextButton")
-local UICorner_2 = Instance.new("UICorner")
-local AutoComplete = Instance.new("TextButton")
-local UICorner_3 = Instance.new("UICorner")
-local YN = Instance.new("TextButton")
-local UICorner_4 = Instance.new("UICorner")
-local Leave = Instance.new("TextButton")
-local UICorner_5 = Instance.new("UICorner")
+local Activated = false
+local Player = game.Players.LocalPlayer
+local Char = Player.Character
 
---Properties:
-
-Main.Name = "Main"
-Main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-Main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-Main_2.Name = "Main"
-Main_2.Parent = Main
-Main_2.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-Main_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Main_2.BorderSizePixel = 0
-Main_2.Position = UDim2.new(0.307177663, 0, 0.160508081, 0)
-Main_2.Size = UDim2.new(0.384413898, 0, 0.677829087, 0)
-
-UICorner.Parent = Main_2
-
-TextTitle.Name = "TextTitle"
-TextTitle.Parent = Main_2
-TextTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextTitle.BackgroundTransparency = 1.000
-TextTitle.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextTitle.BorderSizePixel = 0
-TextTitle.Size = UDim2.new(1, 0, 0.0851788744, 0)
-TextTitle.Font = Enum.Font.Arcade
-TextTitle.Text = "ExaGonal Cheat"
-TextTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextTitle.TextScaled = true
-TextTitle.TextSize = 14.000
-TextTitle.TextWrapped = true
-
-DungeonPlace.Name = "DungeonPlace"
-DungeonPlace.Parent = Main_2
-DungeonPlace.BackgroundColor3 = Color3.fromRGB(66, 66, 66)
-DungeonPlace.BorderColor3 = Color3.fromRGB(0, 0, 0)
-DungeonPlace.BorderSizePixel = 0
-DungeonPlace.Position = UDim2.new(0.337308347, 0, 0.136286199, 0)
-DungeonPlace.Size = UDim2.new(0.340715498, 0, 0.0851788744, 0)
-DungeonPlace.Font = Enum.Font.Arcade
-DungeonPlace.Text = "TP TO DUNGEON PLACE"
-DungeonPlace.TextColor3 = Color3.fromRGB(0, 0, 0)
-DungeonPlace.TextScaled = true
-DungeonPlace.TextSize = 14.000
-DungeonPlace.TextWrapped = true
-
-UICorner_2.Parent = DungeonPlace
-
-AutoComplete.Name = "AutoComplete"
-AutoComplete.Parent = Main_2
-AutoComplete.BackgroundColor3 = Color3.fromRGB(66, 66, 66)
-AutoComplete.BorderColor3 = Color3.fromRGB(0, 0, 0)
-AutoComplete.BorderSizePixel = 0
-AutoComplete.Position = UDim2.new(0.0306643955, 0, 0.894378185, 0)
-AutoComplete.Size = UDim2.new(0.340715498, 0, 0.0851788744, 0)
-AutoComplete.Font = Enum.Font.Arcade
-AutoComplete.Text = "AutoComplete current dungeon"
-AutoComplete.TextColor3 = Color3.fromRGB(0, 0, 0)
-AutoComplete.TextScaled = true
-AutoComplete.TextSize = 14.000
-AutoComplete.TextWrapped = true
-
-UICorner_3.Parent = AutoComplete
-
-YN.Name = "Y/N"
-YN.Parent = AutoComplete
-YN.BackgroundColor3 = Color3.fromRGB(66, 66, 66)
-YN.BorderColor3 = Color3.fromRGB(0, 0, 0)
-YN.BorderSizePixel = 0
-YN.Position = UDim2.new(1.10065305, 0, 0.0449450687, 0)
-YN.Size = UDim2.new(0.340289623, 0, 0.905179441, 0)
-YN.Font = Enum.Font.Arcade
-YN.Text = "Y/N"
-YN.TextColor3 = Color3.fromRGB(0, 0, 0)
-YN.TextScaled = true
-YN.TextSize = 14.000
-YN.TextWrapped = true
-
-UICorner_4.Parent = YN
-
-Leave.Name = "Leave"
-Leave.Parent = Main
-Leave.BackgroundColor3 = Color3.fromRGB(66, 66, 66)
-Leave.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Leave.BorderSizePixel = 0
-Leave.Position = UDim2.new(0.910007179, 0, 0.838187695, 0)
-Leave.Size = UDim2.new(0.0708909184, 0, 0.124860838, 0)
-Leave.Font = Enum.Font.Arcade
-Leave.Text = "EXOGonal cheat"
-Leave.TextColor3 = Color3.fromRGB(0, 0, 0)
-Leave.TextScaled = true
-Leave.TextSize = 14.000
-Leave.TextWrapped = true
-
-UICorner_5.Parent = Leave
-
--- Scripts:
-
-local function FRAXWT_fake_script() -- DungeonPlace.LocalScript 
-	local script = Instance.new('LocalScript', DungeonPlace)
-
-	local function tp()
-		game:GetService('TeleportService'):Teleport(109748636043804)
-	end
-	
-	script.Parent.Activated:Connect(function()
-		tp()
-	end)
-end
-coroutine.wrap(FRAXWT_fake_script)()
-local function XHDE_fake_script() -- AutoComplete.LocalScript 
-	local script = Instance.new('LocalScript', AutoComplete)
-
-	local Player = game.Players.LocalPlayer
-	local Char = Player.Character
-	local HttpService = game:GetService("HttpService")
-	local fileName = "UTD2.txt"
-	
-	local function readConfig()
-		local configString = readfile(fileName)
-		return HttpService:JSONDecode(configString)
-	end
-	
-	local function writeConfig(config)
-		local configString = HttpService:JSONEncode(config)
-		writefile(fileName, configString)
-	end
-	
-	local function updateAutoCompleteEnabled(newValue)
-		local config = readConfig()
-		config.AutoCompleteEnabled = newValue 
-		writeConfig(config)
-	
-	end
-	
-	local InAction = false
-	
-	local function AutoComplete()
-	
-		if InAction then
-			InAction = false
-		else
-			InAction = true
-		end
-	
-		script.Parent["Y/N"].Text = InAction and "Y" or "N"
-		updateAutoCompleteEnabled(InAction)
-	
-		while InAction == true do
-			if not game.Workspace:FindFirstChild("RealDungeons") then
-				break
+local function AutoFarm()
+	print("FarmStarted")
+	Activated = true
+	while Activated do
+		print(e)
+		wait(1)
+		for _, Dungeon in pairs(game.Workspace:FindFirstChild("RealDungeons"):GetChildren()) do
+			if Dungeon.Name ~= game.ReplicatedStorage.ActiveDungeon.Value then
+				return
 			end
-			for _, Dungeon in pairs(game.Workspace.RealDungeons:GetChildren()) do
-				if Dungeon.Name ~= game.ReplicatedStorage.ActiveDungeon.Value then return end
-				for _, D in pairs(Dungeon.Areas:GetChildren()) do
-					for _, Enemy in pairs(D:GetChildren()) do
-						if Enemy:IsA("Model") then
-							if Enemy:FindFirstChild("HumanoidRootPart") then
-								repeat
-									game.ReplicatedStorage.UseSpell:FireServer("Toriel' Flame Daggers")
-									if Char then
-										Char.HumanoidRootPart.CFrame = Enemy.HumanoidRootPart.CFrame * CFrame.new(0,5,2)
-									end
-									wait(0.25)
-								until not Enemy:FindFirstChild("Humanoid") or not Enemy:FindFirstChild("HumanoidRootPart")
+
+			-- Handle monsters inside areas
+			for _, DungeonArea in pairs(Dungeon.Areas:GetChildren()) do
+				for _, Monster in pairs(DungeonArea:GetChildren()) do
+					if Monster:IsA("Model") and Monster:FindFirstChild("Humanoid") and Monster:FindFirstChild("HumanoidRootPart") then
+						repeat
+							local success, err = pcall(function()
+								game.ReplicatedStorage.UseSpell:FireServer("Toriel' Flame Daggers")
+							end)
+							if not success then
+								warn("Error firing spell: " .. err)
 							end
-						end
+							
+							Connect = game["Run Service"].Heartbeat:Connect(function()
+								if Char:FindFirstChild("HumanoidRootPart") and Monster and Monster:FindFirstChild("HumanoidRootPart") then
+									Char.HumanoidRootPart.CFrame = Monster.HumanoidRootPart.CFrame * CFrame.new(0,-8,0)
+								end
+							end)
+
+
+							wait(0.1)
+						until not Monster or not Monster:FindFirstChild("Humanoid") or Monster.Humanoid.Health < 1 or not Char
+						Char.HumanoidRootPart.CFrame = Dungeon.Spawn.CFrame
 					end
 				end
-				for _, i in pairs(Dungeon:GetChildren()) do
-					if i:IsA("Model") then
-						if i:FindFirstChild("Humanoid") then
-							repeat
-								game.ReplicatedStorage.UseSpell:FireServer("Toriel' Flame Daggers")
-								if Char then
-									Char.HumanoidRootPart.CFrame = i.HumanoidRootPart.CFrame * CFrame.new(0,5,2)
-								end
-	
-								wait(0.25)
-							until not i:FindFirstChild("Humanoid") or not i:FindFirstChild("HumanoidRootPart")
-						end
-					end
-				end 
 			end
-			wait(1)
+
+			-- Handle monsters directly in the dungeon
+			for _, Monster in pairs(Dungeon:GetChildren()) do
+				if Monster:IsA("Model") and Monster:FindFirstChild("Humanoid") and Monster:FindFirstChild("HumanoidRootPart") then
+					repeat
+						local success, err = pcall(function()
+							game.ReplicatedStorage.UseSpell:FireServer("Toriel' Flame Daggers")
+						end)
+						if not success then
+							warn("Error firing spell: " .. err)
+						end
+
+
+						Connect = game["Run Service"].Heartbeat:Connect(function()
+							if Char:FindFirstChild("HumanoidRootPart") and Monster and Monster:FindFirstChild("HumanoidRootPart") then
+								Char.HumanoidRootPart.CFrame = Monster.HumanoidRootPart.CFrame * CFrame.new(0,-8,0)
+							end
+						end)
+
+						wait(0.1)
+					until not Monster or not Monster:FindFirstChild("Humanoid") or Monster.Humanoid.Health < 1 or not Char
+					Char.HumanoidRootPart.CFrame = Dungeon.Spawn.CFrame
+				end
+			end
+			
+			if Connect then Connect:Disconnect() end
+
 		end
 	end
-	
-	local config = readConfig()
-	
-	if config.AutoCompleteEnabled == true then
-		AutoComplete()
-	end
-	
-	
-	script.Parent.Activated:Connect(function()
-		AutoComplete()
-	end)
 end
-coroutine.wrap(XHDE_fake_script)()
-local function FZXJZYV_fake_script() -- Leave.LocalScript 
-	local script = Instance.new('LocalScript', Leave)
 
-	script.Parent.Activated:Connect(function()
-		script.Parent.Parent.Main.Visible = not script.Parent.Parent.Main.Visible
-	end)
+-- Wait until RealDungeons exists
+repeat
+	wait(5)
+until game.Workspace:FindFirstChild("RealDungeons")
+
+-- Start the initial AutoFarm
+AutoFarm()
+
+for _, i in pairs(Char:GetChildren()) do
+	if i:IsA("Part") or i:IsA("UnionOperation") or i:IsA("BasePart") then
+		i.CanCollide = false
+		i.CanTouch = false
+	end
 end
-coroutine.wrap(FZXJZYV_fake_script)()
