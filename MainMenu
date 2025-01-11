@@ -74,7 +74,7 @@ end
 
 -- Wait until RealDungeons exists
 repeat
-	wait(5)
+	wait(2)
 until game.Workspace:FindFirstChild("RealDungeons")
 
 -- Start the initial AutoFarm
