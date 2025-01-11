@@ -38,6 +38,7 @@ local function AutoFarm()
 							wait(0.1)
 						until not Monster or not Monster:FindFirstChild("Humanoid") or Monster.Humanoid.Health < 1 or not Char
 						Char.HumanoidRootPart.CFrame = Dungeon.Spawn.CFrame
+game.ReplicatedStorage.SendClient.LagReducer:FireServer() 
 					end
 				end
 			end
@@ -63,6 +64,7 @@ local function AutoFarm()
 						wait(0.1)
 					until not Monster or not Monster:FindFirstChild("Humanoid") or Monster.Humanoid.Health < 1 or not Char
 					Char.HumanoidRootPart.CFrame = Dungeon.Spawn.CFrame
+game.ReplicatedStorage.SendClient.LagReducer:FireServer() 
 				end
 			end
 			
